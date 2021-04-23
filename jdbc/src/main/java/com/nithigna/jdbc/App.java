@@ -28,7 +28,7 @@ public class App {
 		
 		
 		List<Student> students = studentDao.getAllStudents();
-		printStudents(students);
+		printStudents(students);// rowmapper
 		
 		
 

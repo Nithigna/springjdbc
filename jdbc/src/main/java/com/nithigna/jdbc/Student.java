@@ -16,6 +16,10 @@ public class Student {
 		this.average = average;
 	}
 
+	public Student() {
+		// TODO Auto-generated constructor stub
+	}
+
 	public int getId() {
 		return id;
 	}
@@ -31,8 +35,8 @@ public class Student {
 	public int getSem() {
 		return semester;
 	}
-	public void setSem(int sem) {
-		this.semester = sem;
+	public void setSem(int i) {
+		this.semester = i;
 	}
 	public int getAverage() {
 		return average;
