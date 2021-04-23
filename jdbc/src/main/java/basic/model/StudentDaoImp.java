@@ -35,5 +35,23 @@ public class StudentDaoImp  implements StudentDao{
 	}
 
 
+
+
+	@Override
+	public void deleteRowByID(int id) {
+		// TODO Auto-generated method stub
+		String delSQL = "DELETE FROM students where id = ?";
+        int noRecordsdel = jdbcTemplate.update(delSQL,id);
+        System.out.println(noRecordsdel);
+
+	}
+	
+	public void cleanUp() {
+		String sql = "TRUNCATE TABLE STUDENTS";
+		jdbcTemplate.update(sql);
+		System.out.println("table cleaned");
+	}
+
+
 	
 }
