@@ -26,7 +26,15 @@
 		<constructor-arg name="password" value="" />
 	</bean>
 
-	<bean id="studentDao" class="basic.model.StudentDaoImp">
+	<bean id="employeeDao" class="basic.model.EmployeeDaoImpl">
 		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
 	</bean>
+	
+	<bean id="dataSource" class="org.apache.commons.dbcp2.BasicDataSource">
+    <property name="driverClassName" value = "${db.driverClassName}" />
+    <property name="url" value = "${db.url}" />
+    <property name="username" value = "${db.username}" />
+    <property name="password" value = "${db.password}" />
+    <property name="initialSize" value = "${pool.initialSize}" />
+  </bean>
 </beans>

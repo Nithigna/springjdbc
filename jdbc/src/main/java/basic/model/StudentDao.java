@@ -17,5 +17,7 @@ public interface StudentDao {
 	public List<Student> getAllStudents();
 	
 	Student findStudentById(int id);
+	
+	public List<Student> groupStudents();
 
 }

@@ -94,6 +94,22 @@ public class StudentDaoImp  implements StudentDao{
 
 
 
+
+	@Override
+	public List<Student> groupStudents() {
+String sql = 	"select * From students group by sem ";
+List<Student> students = (List<Student>) jdbcTemplate.query(sql, new StudentRowMapper());
+
+return students;
+	}
+
+
+
+	
+	
+
+
+
 	/*
 	 * @Override public Student findStudentById(int id) { String sql =
 	 * "SELECT * FROM STUDENT WHERE id= ?"; Student student=

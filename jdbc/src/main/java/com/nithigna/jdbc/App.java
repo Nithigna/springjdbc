@@ -27,8 +27,15 @@ public class App {
 		
 		
 		
-		List<Student> students = studentDao.getAllStudents();
-		printStudents(students);// rowmapper
+		//List<Student> students = studentDao.getAllStudents();
+		//printStudents(students);// rowmapper
+		
+		
+		
+		List<Student> students = studentDao.groupStudents();
+		printStudents(students);
+		
+		
 		
 		
 
